@@ -6,17 +6,14 @@ let divs = document.querySelectorAll(".grid-container div");
 function randomize() {
     console.log(divs.length, "randomize!")
 
-    // this code affects the whole grid
     grid[0].style.transform = `rotate(${Math.random() * 360}deg)`;
 
-    // just affects the grid divs
     divs.forEach(function (div) {
         let scale = randomNumber(.5, 1.2);
         let translateX = randomNumber(0, 50);
         let translateY = randomNumber(0, 20);
         let rotate = randomNumber(0,360);
 
-        // 50% of the time...
         if (Math.random() > .5) {
             scale = 1;
             translateX = randomNumber(0, 80);

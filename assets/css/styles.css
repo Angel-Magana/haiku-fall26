@@ -10,12 +10,10 @@ body {
     font-size: 5rem;
     overflow: hidden;
 
-    background: black url("../img/Flowers2.gif");
+    background: black url("../img/Moon.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    /* shorthand, but has issues on Safari */
-    /* background: black url("../img/flames.gif") no-repeat center/cover; */
 }
 
 .grid-container {
@@ -30,25 +28,8 @@ body {
     border-bottom: 2px solid rgb(220, 200, 180);
 }
 
-/* CSS Animation example */
-
-/* @keyframes fadeOut {
-    0% { opacity: 1; } 
-    100% { opacity: 0; }
-}
-body {
-    animation-name: fadeOut;
-    animation-duration: 2s;
-} */
-
-/* CSS Transition example */
 
 div {
     transition-property: transform;
     transition-duration: 3s;
 }
-
-/* body {
-    transition-property: transform;
-    transition-duration: 3s;
-} */

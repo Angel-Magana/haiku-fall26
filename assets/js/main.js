@@ -1,35 +1,38 @@
 // main.js
 
-let grid = document.querySelectorAll(".grid-container");
-let divs = document.querySelectorAll(".grid-container div");
+const grid = document.querySelector(".grid-container");
+const divs = document.querySelectorAll(".grid-container div");
+
+// Whole numbers (for degrees / pixels)
+function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// Decimals (for scale) — randomInt(.5, 1.2) would only ever return 0 or 1
+function randomFloat(min, max) {
+    return Math.random() * (max - min) + min;
+}
 
 function randomize() {
-    console.log(divs.length, "randomize!")
+    console.log(divs.length, "randomize!");
 
-    grid[0].style.transform = `rotate(${Math.random() * 360}deg)`;
+    grid.style.transform = `rotate(${randomInt(0, 360)}deg)`;
 
     divs.forEach(function (div) {
-        let scale = randomNumber(.5, 1.2);
-        let translateX = randomNumber(0, 50);
-        let translateY = randomNumber(0, 20);
-        let rotate = randomNumber(0,360);
+        let scale = randomFloat(0.5, 1.2);
+        let translateX = randomInt(0, 50);
+        let translateY = randomInt(0, 20);
+        const rotate = randomInt(0, 360);
 
-        if (Math.random() > .5) {
+        if (Math.random() > 0.5) {
             scale = 1;
-            translateX = randomNumber(0, 80);
-            translateY = randomNumber(0, 80);
+            translateX = randomInt(0, 80);
+            translateY = randomInt(0, 80);
         }
-        
-        div.style.transform = `scale(${scale}) rotate(${rotate}deg)`;
-      
-      
-    });
-  
 
+        div.style.transform =
+            `translate(${translateX}px, ${translateY}px) scale(${scale}) rotate(${rotate}deg)`;
+    });
 }
 
 document.addEventListener("click", randomize);
-
-function randomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}

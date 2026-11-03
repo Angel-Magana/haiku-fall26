@@ -10,7 +10,7 @@ body {
     font-size: 5rem;
     overflow: hidden;
 
-    background: black url("../img/Moon.gif");
+    background: black url("assets/img/Moon.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;

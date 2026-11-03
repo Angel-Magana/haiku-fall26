@@ -6,8 +6,10 @@ html {
 body {
     margin: 0;
     min-height: 100vh;
+    color: white;
 
-   background: black url("assets/img/Moon.gif");
+    /* Path is relative to this CSS file (assets/css/), so go up one folder */
+    background: black url("../img/Moon.gif");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -24,7 +26,6 @@ body {
     padding-bottom: 2rem;
     border-bottom: 2px solid rgb(220, 200, 180);
 }
-
 
 div {
     transition-property: transform;
